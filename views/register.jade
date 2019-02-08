@@ -1,0 +1,69 @@
+﻿extends layout
+
+block content
+  .center_text
+    h1 Anmälan
+
+  form(action="/submit/", name="registration", method="post")
+    .form-group
+      label(for="first_name") Förnamn
+      input(type="text", name="first_name", required).form-control
+    .form-group
+      label(for="last_name") Efternamn
+      input(type="text", name="last_name", required).form-control
+    .form-group
+      label(for="email") E-postadress
+      input(type="email", name="email", required).form-control
+    .form-group
+      label(for="organisation") Organisation/post
+      input(type="text", name="organisation").form-control
+    h3 Solenn akt
+    .checkbox
+      label
+        input(type="checkbox", name="solenn_akt", value="1")
+        | Deltar i solenn akt
+    .checkbox
+      label
+        input(type="checkbox", name="greeting", value="1")
+        | Vill framföra hälsning
+    h3 Priskategori
+    .radio
+      label
+        input(type="radio", name="price", value="student", checked)
+        | TF:s ordinarie medlem (75 €)
+    .radio
+      label
+        input(type="radio", name="price", value="normal")
+        | Normalpris (85 €)
+    .radio
+      label
+        input(type="radio", name="price", value="free")
+        | Gratisplats (0 €)
+    .radio
+      label
+        input(type="radio", name="price", value="supporter")
+        | Understödspris (150 €)
+    h3 Detaljer
+    .checkbox
+      label
+        input(type="checkbox", name="alcoholfree", value="1")
+        | Alkoholfri
+    .form-group
+      label(for="diet") Allergier/dieter
+      input(type="text", name="diet").form-control
+    .form-group
+      label(for="avec") Avec (obs: måste anmälas skilt!)
+      input(type="text", name="avec").form-control
+    h3 Sillfrukost
+    .checkbox
+      label
+        input(type="checkbox", name="sillis", value="1")
+        | Jag deltar i sillfrukosten (förköp: 10 €, vid dörren 12 €)
+    .form-group
+      label(for="misc") Övrigt
+      input(type="text", name="misc").form-control
+    div.actions
+      input(type="submit", value="Skicka")
+    p
+      a(href="/") Tillbaka till startsidan
+

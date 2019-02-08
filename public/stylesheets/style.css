@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Clarendon";
+  src: url(../images/ClarendonLTStd-Light.ttf);
+}
+
+@font-face {
+  font-family: "Caslon";
+  src: url(../images/CaslonRoman.ttf);
+}
+body {
+  background-image: url("../images/tf145web_MORKAREbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  padding-top: 70px;
+  font-family: 'Caslon', 'Lato', sans-serif;
+  font-size: 13pt;
+}
+.logo {
+  width: 300px;
+  height: 375px;
+  margin: auto;
+  display:inline-block;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../images/logoSLOCKNAD_web.png);
+}
+
+.logo:hover {
+  background-image: url(../images/logoPA_web.png);
+}
+
+
+
+#container {
+  margin: auto;
+  margin-top: 70px;
+  padding: 45px;
+  background-color: #a5a38b;
+  text-align: left;
+}
+
+@media (min-width: 900px) {
+  #container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 899px) {
+  #container {
+    width: 90%;
+  }
+}
+
+#schedule {
+  margin-bottom: 30px;
+  font-family: 'Caslon', sans-serif;
+  font-size: 13pt;
+  color: #000000;
+}
+
+.center_text {
+	text-align: center;
+}
+
+#div {
+  font-family: 'Caslon', sans-serif;
+  font-size: 13pt;
+  color: #000000;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Clarendon', 'Playfair Display', serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  padding-bottom: 20px;
+}
+
+p {
+  font-family: 'Caslon', sans-serif;
+  font-size: 13pt;
+  color: #000000;
+}
+
+a, input[type="submit"] {
+  font-weight: bold;
+  color: #000000;
+}
+
+.register_button, .register_button:hover, .register_button:active, input[type="submit"] {
+  display: inline-block;
+  border-style: solid;
+  border-color: #000000;
+  padding: 10px;
+  background-color: #a5a38b;
+  color: #000000;
+  font-family: 'Caslon', 'Lato', serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.register_button + .register_button {
+  margin-left: 5px;
+}
+
+#ad {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+#ad img {
+  margin: 15px 30px 40px 30px;
+}
+
+.ad_header {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+}
