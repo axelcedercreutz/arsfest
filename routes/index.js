@@ -4,6 +4,10 @@ var list = require('../modules/list');
 var listExport = require('../modules/export');
 var router = express.Router();
 
+var openingInvite = new Date('Febuary 15, 2019 12:00:00');
+var closeDate = new Date('March 10, 2019 23:59:00');
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Teknologföreningens årsfest' });
@@ -12,9 +16,9 @@ router.get('/', function(req, res, next) {
 
 /* GET register form */
 router.get('/register/', function(req, res, next) {
-  if (Date.now() < 1518381888000) {
+  if (Date.now() < openingInvite) {
     res.render('notopen', { title: 'Anmälningen är stängd' });
-  } else if (Date.now() < 1520002624000) {
+  } else if (Date.now() < closeDate) {
     res.render('register', { title: 'Anmälan' });
   } else {
     res.render('closed', { title: 'Anmälningen är stängd' });
